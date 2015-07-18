@@ -14,9 +14,9 @@ var data = {
         businessSummary: 'I want to make lemonade',
         selfSummary: 'I looove lemonade!',
         region: 'New York',
-        products: [new Product({
+        products: [new models.Product({
             productName: 'Lemonade',
-            ingredients: [new Ingredient({
+            ingredients: [new models.Ingredient({
                 ingredientName: 'lemon',
                 costPerUnit: 5,
                 unitsPerProduct: 1
@@ -25,15 +25,15 @@ var data = {
         })]
     }, {
         firstName: 'Greg',
-        lastName: 'Myers',
+        lastName: 'Meyers',
         age: 9,
         businessName: 'Swimsuits',
         businessSummary: 'I want to make cool swimsuits',
         selfSummary: 'I looove swimsuits!',
         region: 'Boston',
-        products: [new Product({
+        products: [new models.Product({
             productName: 'Swimsuit',
-            ingredients: [new Ingredient({
+            ingredients: [new models.Ingredient({
                 ingredientName: 'latex',
                 costPerUnit: 20,
                 unitsPerProduct: 1
