@@ -7,6 +7,11 @@ var path = require('path');
 //   res.render('index', { title: 'Express' });
 // });
 
+router.get('/', function(req, res, next) {
+	var index = path.join(__dirname, '..', 'views', 'index.html');
+	res.sendFile(index);
+});
+
 router.get('/manager', function(req, res, next) {
 	var index = path.join(__dirname, '..', 'views', 'manager.html');
 	res.sendFile(index);
