@@ -5,12 +5,12 @@ var path = require('path');
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	var index = path.join(__dirname, '..', 'views', 'index.html');
-  res.sendFile(index);
+	res.sendFile(index);
 });
 
 router.get('/manager', function(req, res, next) {
 	var index = path.join(__dirname, '..', 'views', 'manager.html');
-  res.sendFile(index);
+	res.sendFile(index);
 });
 
 module.exports = router;
