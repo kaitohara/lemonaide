@@ -4,6 +4,37 @@ mongoose.connect('mongodb://localhost/lemonade');
 
 mongoose.connection.on('error', console.error.bind(console, 'connection error:'));
 
+// Product: String,
+// Ingredient: [Object] where Object is {name: String, costUnit: Number, units/Product:Number}
+// PricetoSellProduct: Number
+
+var ingredientSchema = new mongoose.Schema({
+	ingredientName: {
+		type: String,
+		required: true
+	},
+	costPerUnit: {
+		type: Number,
+		required: true
+	},
+	unitsPerProduct: {
+		type: Number,
+		required: true
+	}
+})
+
+var productSchema = new mongoose.Schema({
+	productName: {
+		type: String,
+		required: true
+	},
+	ingredients: [ingredientSchema],
+	price: {
+		type: Number,
+		required: true
+	}
+})
+
 var youthSchema = new mongoose.Schema({
 	//first name of child
 	firstName: {
@@ -35,41 +66,11 @@ var youthSchema = new mongoose.Schema({
 	products: [productSchema]
 })
 
-// Product: String,
-// Ingredient: [Object] where Object is {name: String, costUnit: Number, units/Product:Number}
-// PricetoSellProduct: Number
 
-var productSchema = new mongoose.Schema({
-	productName: {
-		type: String,
-		required: true
-	},
-	ingredients: [ingredientSchema],
-	price: {
-		type: Number,
-		required: true
-	}
 
-})
-
-var ingredientSchema = new mongoose.Schema({
-	ingredientName: {
-		type: String,
-		required: true
-	},
-	costPerUnit: {
-		type: Number,
-		required: true
-	},
-	unitsPerProduct: {
-		type: Number,
-		required: true
-	}
-})
-
-var Youth = mongoose.models('Youth', youthSchema);
-var Product = mongoose.models("Product", productSchema);
-var Ingredient = mongoose.models("Ingredient", ingredientSchema);
+var Youth = mongoose.model('Youth', youthSchema);
+var Product = mongoose.model("Product", productSchema);
+var Ingredient = mongoose.model("Ingredient", ingredientSchema);
 
 module.exports = {
 	Youth: mongoose.model('Youth', youthSchema),

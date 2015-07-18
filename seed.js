@@ -25,7 +25,7 @@ var data = {
         })]
     }, {
         firstName: 'Greg',
-        lastName: 'Myers',
+        lastName: 'Meyers',
         age: 9,
         businessName: 'Swimsuits',
         businessSummary: 'I want to make cool swimsuits',
