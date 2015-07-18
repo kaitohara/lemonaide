@@ -17,5 +17,9 @@ router.get('/manager', function(req, res, next) {
 	res.sendFile(index);
 });
 
+router.get('/todo', function(req, res, next) {
+	var index = path.join(__dirname, '..', 'views', 'todo.html');
+	res.sendFile(index);
+});
 module.exports = router;
 
