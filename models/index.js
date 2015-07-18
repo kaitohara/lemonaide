@@ -24,7 +24,8 @@ var youthSchema = new mongoose.Schema({
 	},
 	//what their business does
 	businessSummary: {
-		String, required: true
+		type: String,
+		required: true
 	},
 	//an optional blurb about themselves.
 	selfSummary: String,
@@ -70,6 +71,11 @@ var Youth = mongoose.models('Youth', youthSchema);
 var Product = mongoose.models("Product", productSchema);
 var Ingredient = mongoose.models("Ingredient", ingredientSchema);
 
-module.exports.Youth = Youth;
-module.exports.Product = Product;
-module.exports.Ingredient = Ingredient;
+module.exports = {
+	Youth: mongoose.model('Youth', youthSchema),
+	Product: mongoose.model('Product', productSchema),
+	Ingredient: mongoose.model('Ingredient', ingredientSchema)
+}
+// module.exports.Youth = Youth;
+// module.exports.Product = Product;
+// module.exports.Ingredient = Ingredient;
