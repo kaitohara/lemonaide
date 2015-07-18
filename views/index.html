@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <title>Lemonaide</title>
-    <base href="/">
 
     <!-- CSS dependencies -->
     <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
@@ -10,10 +9,15 @@
 
     <!--JS dependencies-->
  	<script src="/scripts/jquery.min.js"></script>
+    <script src="/scripts/angular.js"></script>
+    <script src="/scripts/angular-ui-router.js"></script>
+
+    <!-- Angular Dependencies -->
+    <script src = "/javascripts/app.js"></script>
 
 </head>
-<body ng-app="auther">
-	<navbar></navbar>
+<body ng-app="lemonaide">
+	<h1> Does this work? </h1>
     <ui-view></ui-view>
     <footer></footer>
 </body>

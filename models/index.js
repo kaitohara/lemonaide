@@ -24,7 +24,8 @@ var youthSchema = new mongoose.Schema({
 	},
 	//what their business does
 	businessSummary: {
-		String, required: true
+		type: String,
+		required: true
 	},
 	//an optional blurb about themselves.
 	selfSummary: String,
