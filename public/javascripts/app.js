@@ -1,1 +1,1 @@
-var app = angular.module("lemonaide", ['ui.router'])
+var app = angular.module("lemonaide", ['ui.router']);
