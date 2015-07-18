@@ -3,13 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lumino - Dashboard</title>
+<title>Lemonaide - Dashboard</title>
 
 <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
-
-<link rel="stylesheet" href="/stylesheets/style.css">
-<link rel="stylesheet" href="/stylesheets/style.css">
-
+<link rel="stylesheet" href="/stylesheets/styles.css">
 
 </head>
 
@@ -23,8 +20,13 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#"><span>Lumino</span>Admin</a>
+				<a class="navbar-brand" href="#"><span>Lemonaide</span>Dashboard</a>
+				<!-- USER NAVBAR PULLDOWN -->
 				<ul class="user-menu">
+					<a class="pull-right" href="">About</a>
+
+				</ul>
+				<!-- <ul class="user-menu">
 					<li class="dropdown pull-right">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> User <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
@@ -33,25 +35,23 @@
 							<li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 						</ul>
 					</li>
-				</ul>
+				</ul> -->
 			</div>
 							
 		</div><!-- /.container-fluid -->
 	</nav>
 		
 	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
-		<form role="search">
-			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Search">
-			</div>
-		</form>
+		<br>
 		<ul class="nav menu">
 			<li class="active"><a href="index.html"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>
-			<li><a href="widgets.html"><span class="glyphicon glyphicon-th"></span> Widgets</a></li>
+<!-- 			<li><a href="widgets.html"><span class="glyphicon glyphicon-th"></span> Widgets</a></li> -->
 			<li><a href="charts.html"><span class="glyphicon glyphicon-stats"></span> Charts</a></li>
-			<li><a href="tables.html"><span class="glyphicon glyphicon-list-alt"></span> Tables</a></li>
-			<li><a href="forms.html"><span class="glyphicon glyphicon-pencil"></span> Forms</a></li>
-			<li><a href="panels.html"><span class="glyphicon glyphicon-info-sign"></span> Alerts &amp; Panels</a></li>
+<!-- 			<li><a href="tables.html"><span class="glyphicon glyphicon-list-alt"></span> Tables</a></li> -->
+			<li><a href="forms.html"><span class="glyphicon glyphicon-pencil"></span> Update</a></li>
+
+			<li><a href="charts.html"><span class="glyphicon glyphicon-stats"></span> To-Do List</a></li>
+<!-- 			<li><a href="panels.html"><span class="glyphicon glyphicon-info-sign"></span> Alerts &amp; Panels</a></li> -->
 			<li class="parent ">
 				<a href="#">
 					<span class="glyphicon glyphicon-list"></span> Dropdown <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="glyphicon glyphicon-s glyphicon-plus"></em></span> 
@@ -75,7 +75,7 @@
 				</ul>
 			</li>
 			<li role="presentation" class="divider"></li>
-			<li><a href="login.html"><span class="glyphicon glyphicon-user"></span> Login Page</a></li>
+<!-- 			<li><a href="login.html"><span class="glyphicon glyphicon-user"></span> Login Page</a></li> -->
 		</ul>
 	</div><!--/.sidebar-->
 		
@@ -101,8 +101,8 @@
 							<em class="glyphicon glyphicon-shopping-cart glyphicon-l"></em>
 						</div>
 						<div class="col-sm-9 col-lg-7 widget-right">
-							<div class="large">120</div>
-							<div class="text-muted">New Orders</div>
+							<div class="large">$120</div>
+							<div class="text-muted">Dollars Earned</div>
 						</div>
 					</div>
 				</div>
@@ -115,7 +115,7 @@
 						</div>
 						<div class="col-sm-9 col-lg-7 widget-right">
 							<div class="large">52</div>
-							<div class="text-muted">Comments</div>
+							<div class="text-muted">Items Sold</div>
 						</div>
 					</div>
 				</div>
@@ -203,7 +203,7 @@
 		<div class="row">
 			<div class="col-md-8">
 			
-				<div class="panel panel-default chat">
+				<!-- <div class="panel panel-default chat">
 					<div class="panel-heading" id="accordion"><span class="glyphicon glyphicon-comment"></span> Chat</div>
 					<div class="panel-body">
 						<ul>
@@ -257,7 +257,7 @@
 							</span>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				
 			</div><!--/.col-->
 			
