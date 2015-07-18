@@ -18,4 +18,3 @@ router.get('/manager', function(req, res, next) {
 });
 
 module.exports = router;
-
