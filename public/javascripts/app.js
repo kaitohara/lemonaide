@@ -14,6 +14,7 @@ app.config(function($stateProvider, $locationProvider) {
 		})
 		.state("signup", {
 			url: "/signup",
+			controller: "signupCtrl",
 			templateUrl: "/templates/signup.html"
 		})
 		.state("signup.name", {
@@ -58,7 +59,7 @@ app.config(function($stateProvider, $locationProvider) {
 			controller: "goalCtrl"
 		})
 
-		.state("youthBusinesses", {
+	.state("youthBusinesses", {
 			url: '/youthBusinesses',
 			templateUrl: '/templates/sponsorSection/businessList.html',
 			controller: "businessListCtrl"

@@ -1,9 +1,9 @@
 <div class="col-lg-5 col-md-5 col-sm-6 col-xs-6 center-block vertical-center centered" id="signup-block">
-	<h3 class='sneet' >Your name is awesome! What are you thinking of selling?</h3>
+	<h3 class='sneet' >Love it! Finally, how would you describe your business?</h3>
 	<p><i>Example: Lemonade</i></p>
 	<form method="PUT">
 		<div class="form-group">
-			<input name="businessName" type="text" class="form-control" id="businessName" maxlength="32">
+			<input name="businessStatement" type="text" class="form-control" id="businessStatement" maxlength="40" ng-model="signupUser.businessStatement">
 		</div>
 
 		<button ui-sref="dashboard.overview" 
