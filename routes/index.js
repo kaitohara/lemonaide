@@ -80,6 +80,20 @@ router.post('/addTodo', function(req, res, next){
 	})
 })
 
+router.post('/updateTodo', function(req, res, next){
+	// console.log(req.body.todo, req.body.done)
+	model.Youth.findOneAndUpdate({ 'firstName': 'Kaito' , 'todo.todo':req.body.todo}, {$set: {'todo.$.done' : req.body.done}}, function(err, data){
+		console.log(err, data)
+	})
+})
+
+router.post('/removeTodo', function(req, res, next){
+	console.log(req.body.todo)
+	model.Youth.findOneAndUpdate({ 'firstName': 'Kaito'}, {$pull: {'todo' : {'todo': req.body.todo }}}, function(err, data){
+		console.log('a',err, data)
+	})
+})
+
 router.put('/addProduct', function(req, res, next) {
 	console.log(req.body)
 	var newProduct = new model.Product()
