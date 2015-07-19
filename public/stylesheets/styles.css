@@ -115,7 +115,7 @@ path:hover {
 
 .title-wrap{
 	margin-top: 2%;
-	margin-left: 2%;
+	margin-left: 4%;
 	width: 33%;
 	position: absolute;
 }
@@ -136,6 +136,7 @@ path:hover {
 
 .splash-img-container h3 {
 	text-align: center;
+	color: #FFFF19;
 	word-wrap:break-word;
 	letter-spacing: 10px;
 	padding-top: 11%;
@@ -146,7 +147,7 @@ path:hover {
 .splash-img-container .login {
 	letter-spacing: 3px;
 	text-decoration: none;
-	color: black;
+	color: #FFFF19;
 	font-size: 19px;
 	text-align: initial;
 	position: absolute;
@@ -158,7 +159,7 @@ path:hover {
 .splash-img-container .signup {
 	letter-spacing: 3px;
 	text-decoration: none;
-	color: black;
+	color: #FFFF19;
 	font-size: 19px;
 	text-align: initial;
 	position: absolute;
@@ -170,7 +171,7 @@ path:hover {
 .splash-img-container .donors {
 	letter-spacing: 3px;
 	text-decoration: none;
-	color: black;
+	color: #FFFF19;
 	font-size: 19px;
 	text-align: initial;
 	position: absolute;
@@ -179,7 +180,19 @@ path:hover {
 	transform: rotate(5deg);
 }
 
-.login:hover, .signup:hover, .donors:hover {
+.splash-img-container .about {
+	letter-spacing: 3px;
+	text-decoration: none;
+	color: #FFFF19;
+	font-size: 19px;
+	text-align: initial;
+	position: absolute;
+	margin-top: 27%;
+	margin-left: 32%;
+	transform: rotate(-10deg);
+}
+
+.login:hover, .signup:hover, .donors:hover, .about:hover {
 	transition: 0.5s;
 	color: white;
 }
