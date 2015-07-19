@@ -46,6 +46,10 @@ var youthSchema = new mongoose.Schema({
 		type: String,
 		required: true
 	},
+	password: {
+		type: String,
+		required: true
+	},
 	//their age (not required)
 	age: Number,
 	//name of their business (definitely required)
