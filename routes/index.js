@@ -26,7 +26,7 @@ router.get('/todo', function(req, res, next) {
 
 router.get('/youthList', function(req, res, next) {
 
-	model.Youth.find().exec().then(function(youthList){
+	model.Youth.find().exec().then(function(youthList) {
 		res.json(youthList)
 	})
 });
@@ -40,15 +40,12 @@ router.get('/youth', function(req, res, next) {
 })
 
 router.put('/updateSettings', function(req, res, next) {
-	model.Youth.findOneAndUpdate({
+	model.Youth.find({
 		firstName: 'Kaito'
-	}, {
-		products[0].productName: req.body.productName,
-			products[0].price: req.body.price
-	}, function() {
-		res.send(200)
-	})
-
+	}).exec().then(function(youth) {
+		youth.products[0].productName = req.body.productName;
+		youth.products[0].price = req.body.price;
+	}).save()
 })
 
 // router.get('/login', function(req, res, next) {
