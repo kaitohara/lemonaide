@@ -38,7 +38,7 @@ var productSchema = new mongoose.Schema({
 
 var todoSchema = new mongoose.Schema({
 	todo: String,
-	done: { 
+	done: {
 		type: Boolean,
 		default: false
 	}
@@ -79,16 +79,25 @@ var youthSchema = new mongoose.Schema({
 	todo: [todoSchema]
 })
 
+var charitySchema = new mongoose.Schema({
+	name: String,
+	websiteUrl: String,
+	imgUrl: String,
+	charityBlurb: String
+})
+
 
 var Youth = mongoose.model('Youth', youthSchema);
 var Product = mongoose.model("Product", productSchema);
 var Ingredient = mongoose.model("Ingredient", ingredientSchema);
+var Charity = mongoose.model("Charity", charitySchema);
 
 module.exports = {
 		Youth: mongoose.model('Youth', youthSchema),
 		Product: mongoose.model('Product', productSchema),
 		Ingredient: mongoose.model('Ingredient', ingredientSchema),
-		Todo: mongoose.model("Todo", todoSchema)
+		Todo: mongoose.model("Todo", todoSchema),
+		Charity: mongoose.model("Charity", charitySchema)
 	}
 	// module.exports.Youth = Youth;
 	// module.exports.Product = Product;
