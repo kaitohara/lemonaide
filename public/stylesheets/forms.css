@@ -1,0 +1,64 @@
+.form-control {
+	padding: 20px;
+	margin: 20px 0px;
+	border-radius: 20px;
+	-webkit-transition: all 0.5s ease-in;
+	transition: all 0.5 ease-in;
+}
+
+.form-control:focus {
+	padding: 25px 20px;
+	border-radius: 10px;
+	border: 1px solid rgba(81, 203, 238, 1);
+}
+
+.action {
+  color: #00B7FF;
+  background-color: white;
+  border-color:;
+  border-radius: 10px;
+  font-size: 15px;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  outline: none; 
+}
+
+.action:hover {
+	color: #00B7FF
+}
+
+.spin {
+  -webkit-transition: -webkid-transform 0.5s ease;
+  -moz-transition: -moz-transform 0.5s ease;
+  -ms-transition: -ms-transform 0.5s ease;
+  -o-transition: -o-transform 0.5s ease;
+  transition: transform 0.5s ease; }
+
+.spin:hover {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg); 
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+/*
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}*/

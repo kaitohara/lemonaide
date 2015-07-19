@@ -5,30 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lemonaide - Dashboard</title>
 
-<link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
-<link rel="stylesheet" href="/stylesheets/styles.css">
+<link rel="stylesheet" href="/stylesheets/forms.css">
 
 </head>
 <!--wont need above once we switched to states -->
-<div class="col-lg-5 col-md-5 col-sm-6 col-xs-6 center-block vertical-center centered" id="signup-block">
-		<h3 class='sneet' >Log In</h3>
+<div class="col-lg-4 col-md-4 col-sm-5 col-xs-6 center-block vertical-center centered" id="signup-block">
+		<h3 class='sneet'>Log In</h3>
 		<div>
     		<p><a ui-sref="signup" id="signUpLink">New to Lemonaide? Sign up here!</a></p>
 		</div>
 		
 		<form>
 			<div class="form-group">
-				<input name="firstName" type="text" class="form-control" id="firstName" placeholder="First Name" maxlength="32">
-
-				<input name="lastName" type="text" class="form-control" id="lastName" placeholder="Last Name" maxlength="32">
+				<input name="userName" type="text" class="form-control" id="firstName" placeholder="Username" maxlength="32">
 
 				<input name="password" type="password" class="form-control" id="signup_password" placeholder="Password" data-toggle="tooltip" data-placement="left" title="Min. 7 characters. Include at least one Capital letter and one number">
-
-				<input name="age" type="text" class="form-control" id="lastName" placeholder="Age" maxlength="32">
 			</div>
 			<div class="checkbox">
 				<!-- <button type="submit" class="btn btn-default">Submit</button> -->
-				<button ui-sref = "dashboard.overview" type="submit"class="btn btn-lg action fave hvr-grow" aria-hidden="true"><i class="spin glyphicon glyphicon-chevron-right"></i></button>
+				<button ui-sref = "dashboard.overview" type="submit" class="btn btn-lg action fave hvr-grow spin" aria-hidden="true"><i class="glyphicon glyphicon-ok"></i></button>
 			</div>
 		</form>
 	</div>
