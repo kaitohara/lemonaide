@@ -67,10 +67,12 @@ console.log('here')
 router.put('/addProduct', function(req, res, next) {
 console.log(req.body)
 var newProduct = new model.Product()
-newProduct.name = req.body.name;
+newProduct.productName = req.body.name;
 newProduct.price = req.body.price;
-newProduct.cost = req.body.cost;
-model.Youth.findOneAndUpdate({ 'firstName': 'Kaito' , 'products.productName':'Pizza' })
+// newProduct.cost = req.body.cost;
+model.Youth.findOneAndUpdate({ 'firstName': 'Kaito' }, {$push: {'products' : newProduct}}, function(err, data){
+	console.log('here')
+})
 
 })
 	// router.put('/updateSettings', function(req, res, next) {
