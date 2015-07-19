@@ -1,4 +1,4 @@
-app.controller('updateCtrl', function($scope) {
+app.controller('updateCtrl', function($scope, updateFactory) {
 	$scope.updatedObj = {
 		price: null,
 		productName: null,

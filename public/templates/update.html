@@ -27,7 +27,7 @@
 					<div class="panel-heading">Lemonade</div>
 					<div class="panel-body">
 						<div class="col-md-6">
-							<form role="form">
+							<form ng-submit="updateSettings()">
 							
 								<div class="form-group">
 									<label>How are you feeling today?</label>
@@ -36,14 +36,14 @@
 
 								<div class="form-group">
 									<label>New Selling Price</label>
-									<input class="form-control" placeholder="Enter a new price">
+									<input class="form-control" placeholder="Enter a new price" ng-model="updatedObj.price">
 								</div>
 
 								<div class="form-group">
 									<label>New Product Name</label>
-									<input class="form-control" placeholder="Got a new name for your product?">
+									<input class="form-control" placeholder="Got a new name for your product?" ng-model="updatedObj.productName">
 								</div>
-																
+								<button type="submit" class="btn btn-block btn-primary">Save Settings</button>	
 								
 							</div>
 							

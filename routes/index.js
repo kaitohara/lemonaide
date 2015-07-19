@@ -27,7 +27,7 @@ router.get('/todo', function(req, res, next) {
 router.get('/youthList', function(req, res, next) {
 
 	model.Youth.find().exec().then(function(youthList) {
-		res.json(youthList)
+		res.json(youthList.data)
 	})
 });
 
@@ -39,13 +39,42 @@ router.get('/youth', function(req, res, next) {
 	})
 })
 
+// router.put('/updateSettings', function(req, res, next) {
+// 	model.Youth.find({
+// 		firstName: 'Kaito'
+// 	}).exec().then(function(youth) {
+// 		console.log(1)
+// 		if (req.body.productName) {
+// 			console.log(2)
+// 			youth.products[0].productName = req.body.productName;
+// 			console.log(youth)
+// 		}
+
+// 		if (req.body.price) {
+// 			console.log(3)
+// 			youth.products[0].price = req.body.price
+// 		};
+// 		console.log(youth)
+// 		console.log('woohoo')
+// 		youth.save()
+// 	}).then(function() {
+// 		console.log('woohoo')
+// 		res.send(200);
+// 	})
+// })
+
 router.put('/updateSettings', function(req, res, next) {
-	model.Youth.find({
+	model.Youth.findOneAndUpdate({
 		firstName: 'Kaito'
-	}).exec().then(function(youth) {
-		youth.products[0].productName = req.body.productName;
-		youth.products[0].price = req.body.price;
-	}).save()
+	}, {
+		products[0]: {
+			productName: req.body.productName,
+			price: req.body.price
+		}
+	}, fucntion() {
+		console.log('PLEASE')
+		res.send(200)
+	})
 })
 
 // router.get('/login', function(req, res, next) {
