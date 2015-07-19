@@ -9,19 +9,13 @@
 <link rel="stylesheet" href="/stylesheets/styles.css">
 
 </head>
-
+<!--wont need above once we switched to states -->
 <body>
 	<navbar></navbar>
-	
-	
-
 	<div class="centered">
 		<div class="col-lg-5 col-md-5 col-sm-6 col-xs-6 center-block vertical-center centered" id="login-block">
-			<h3 class='sneet' >Log In</h3>
-			<div>
-				<p>or <a href="#" id="signUpLink">New to Lemonaide? Sign up here!</a></p>
-			</div>
-			<form action="/loggedin" method="GET">
+			
+			<form action="/signedup" method="GET">
 				<div class="form-group">
 					<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
 				
@@ -38,27 +32,7 @@
 		</div>
 	</div>
 
-	<div class="col-lg-5 col-md-5 col-sm-6 col-xs-6 center-block vertical-center centered" id="signup-block">
-		<h3 class='sneet' >Sign Up</h3>
-		<div>
-			<p>or <a href="#" id="createAccountLink">Already have an account? Log in!</a></p>
-		</div>
-		<form action="/signedup" method="POST">
-			<div class="form-group">
-				<input name="firstName" type="text" class="form-control" id="firstName" placeholder="First Name" maxlength="32">
-
-				<input name="lastName" type="text" class="form-control" id="lastName" placeholder="Last Name" maxlength="32">
-
-				<input name="password" type="password" class="form-control" id="signup_password" placeholder="Password" data-toggle="tooltip" data-placement="left" title="Min. 7 characters. Include at least one Capital letter and one number">
-
-				<input name="age" type="text" class="form-control" id="lastName" placeholder="Age" maxlength="32">
-			</div>
-			<div class="checkbox">
-				<!-- <button type="submit" class="btn btn-default">Submit</button> -->
-				<button type="submit" class="btn btn-lg action fave hvr-grow" aria-hidden="true"><i class="spin glyphicon glyphicon-chevron-right"></i></button>
-			</div>
-		</form>
-	</div>
+	
 
 	<div class="col-lg-5 col-md-5 col-sm-6 col-xs-6 center-block vertical-center centered" id="signup-block">
 		<h3 class='sneet' >It's great to have you, [Name]! What's the name of your business?</h3>

@@ -15,17 +15,22 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/manager', function(req, res, next) {
-	var index = path.join(__dirname, '..', 'views', 'manager.html');
+	var index = path.join(__dirname, '..', 'public', 'templates', 'manager.html');
 	res.sendFile(index);
 });
 
 router.get('/todo', function(req, res, next) {
-	var index = path.join(__dirname, '..', 'views', 'todo.html');
+	var index = path.join(__dirname, '..', 'public', 'templates', 'todo.html');
 	res.sendFile(index);
 });
 
 router.get('/login', function(req, res, next) {
-	var index = path.join(__dirname, '..', 'views', 'login.html');
+	var index = path.join(__dirname, '..', 'public', 'templates', 'login.html');
 	res.sendFile(index);
 })
+router.get('/signup', function(req, res, next) {
+	var index = path.join(__dirname, '..', 'public', 'templates', 'signup.html');
+	res.sendFile(index);
+})
+
 module.exports = router;
