@@ -1,9 +1,10 @@
-app.controller('goalCtrl', function($scope, overviewFactory, goalFactory) {
+app.controller('goalCtrl', function($rootScope, $scope, overviewFactory, goalFactory) {
 	$scope.goalDescription;
 	$scope.goalAmount;
 	$scope.totalEarned;
 	$scope.addedGoal = {};
 	$scope.showSuccess = false;
+	$rootScope.numberSoldToday;
 	overviewFactory.getPrice().then(function(data) {
 		$scope.unitPrice = data;
 	});
@@ -18,8 +19,11 @@ app.controller('goalCtrl', function($scope, overviewFactory, goalFactory) {
 		$scope.goalAmount = data.goalAmount;
 	});
 	goalFactory.getTotalEarned().then(function(data){
-		$scope.totalEarned = data.price*data.numberSold
+		// $scope.totalEarned = data.price*data.numberSold
+		// $scope.$on('numberUpdate', function(){
 
+		// })
+		$scope.totalEarned = $rootScope.numberSoldToday*data.price
 	})
 	$scope.addGoal = function(newGoal){
 		console.log(newGoal)
