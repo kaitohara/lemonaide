@@ -36,6 +36,14 @@ var productSchema = new mongoose.Schema({
 	}
 })
 
+var todoSchema = new mongoose.Schema({
+	todo: String,
+	done: { 
+		type: Boolean,
+		default: false
+	}
+})
+
 var youthSchema = new mongoose.Schema({
 	//first name of child
 	firstName: {
@@ -65,9 +73,11 @@ var youthSchema = new mongoose.Schema({
 	//an optional mention for the region they live in.
 	region: String,
 	//what they sell (will relate to product schema)
-	products: [productSchema]
+	products: [productSchema],
+	goalDescription: String,
+	goalAmount: Number,
+	todo: [todoSchema]
 })
-
 
 
 var Youth = mongoose.model('Youth', youthSchema);
@@ -77,7 +87,8 @@ var Ingredient = mongoose.model("Ingredient", ingredientSchema);
 module.exports = {
 		Youth: mongoose.model('Youth', youthSchema),
 		Product: mongoose.model('Product', productSchema),
-		Ingredient: mongoose.model('Ingredient', ingredientSchema)
+		Ingredient: mongoose.model('Ingredient', ingredientSchema),
+		Todo: mongoose.model("Todo", todoSchema)
 	}
 	// module.exports.Youth = Youth;
 	// module.exports.Product = Product;

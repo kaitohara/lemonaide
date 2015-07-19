@@ -58,8 +58,12 @@ app.config(function($stateProvider, $locationProvider) {
 			templateUrl: '/templates/goal.html',
 			controller: "goalCtrl"
 		})
-
-	.state("youthBusinesses", {
+		.state("dashboard.add", {
+			url: '/add',
+			templateUrl: '/templates/add.html',
+			controller: "addCtrl"
+		})
+		.state("youthBusinesses", {
 			url: '/youthBusinesses',
 			templateUrl: '/templates/sponsorSide/businessList.html',
 			controller: "businessListCtrl"
