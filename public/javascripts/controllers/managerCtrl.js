@@ -1,5 +1,5 @@
 app.controller('overviewCtrl', function($scope, $rootScope, overviewFactory, goalFactory) {
-	$scope.numberSoldToday = 0;
+	$scope.numberSoldToday = $rootScope.numberSoldToday || 0;
 	$scope.unitPrice;
 	$scope.prevNumberSold;
 	$scope.userName;
@@ -7,7 +7,9 @@ app.controller('overviewCtrl', function($scope, $rootScope, overviewFactory, goa
 	$scope.goalAmount;
 	$scope.totalEarned;
 	$rootScope.numberSoldToday;
-
+	$scope.newItems = function(){
+		return $rootScope.numberSoldToday;
+	}
 
 	overviewFactory.getNumberSold().then(function(data) {
 		$scope.prevNumberSold = data;
