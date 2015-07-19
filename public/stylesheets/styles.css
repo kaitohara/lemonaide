@@ -1029,3 +1029,7 @@ h1.page-header {
 	float: none;
     margin: 0 auto;
 }
+.roundedIMG {
+	border-radius:100%;
+	width: 70%;
+}

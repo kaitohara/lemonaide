@@ -1,16 +1,35 @@
-{{youthBusinesses.data}}
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" ui-sref="dashboard.overview">{{userName}}'s <span>Lemonaide</span></a>
+                <!-- USER NAVBAR PULLDOWN -->
+                <ul class="user-menu">
+                    <a class="pull-right" href="">About</a>
+                </ul>
+            </div>              
+        </div><!-- /.container-fluid -->
+    </nav>
+    <br>
+    <br>
 <div class="container">
     <div class="row">
-        <div ng-repeat="business in youthBusinesses" class="col-sm-4 col-lg-4 col-md-4">
+        <div ng-repeat="business in youthBusinesses.data" class="col-sm-4 col-lg-4 col-md-4">
             <div class="thumbnail">
-                <img src="http://placehold.it/320x150" alt="">
+                <img class='roundedIMG' src="{{business.photo}}">
                 <div class="caption">
-                    <h4 class="pull-right">See Bizzzz {{business}}</h4>
-                    <h4><a href="#">{{business.Youth.firstName}} {{business.lastName}}</a>
+                    <h4 class="pull-right">See Bizzzz</h4>
+                    <h4><a href="#">{{business.firstName}} {{business.lastName}}</a>
                         </h4>
-                    <p>{{business.businessName}}</p>
-                    <p>{{business.businessSummary}}</p>
                     <p>{{business.selfSummary}}</p>
+                    <p>Business Name: {{business.businessName}}</p>
+                    <p>{{business.businessSummary}}</p>
+                    
                     <p>{{business.region}}</p>
                     <p>Button to Donate</p>
                 </div>
