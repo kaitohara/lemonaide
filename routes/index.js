@@ -25,11 +25,31 @@ router.get('/todo', function(req, res, next) {
 });
 
 router.get('/youthList', function(req, res, next) {
+
 	model.Youth.find().exec().then(function(youthList){
-		console.log(youthList)
 		res.json(youthList)
 	})
 });
+
+router.get('/youth', function(req, res, next) {
+	model.Youth.find({
+		firstName: 'Kaito'
+	}).exec().then(function(youth) {
+		res.send(youth);
+	})
+})
+
+router.put('/updateSettings', function(req, res, next) {
+	model.Youth.findOneAndUpdate({
+		firstName: 'Kaito'
+	}, {
+		products[0].productName: req.body.productName,
+			products[0].price: req.body.price
+	}, function() {
+		res.send(200)
+	})
+
+})
 
 // router.get('/login', function(req, res, next) {
 // 	var index = path.join(__dirname, '..', 'public', 'templates', 'login.html');
