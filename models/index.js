@@ -33,7 +33,8 @@ var productSchema = new mongoose.Schema({
 	numberSold: {
 		type: Number,
 		default: 0
-	}
+	},
+	secret: String
 })
 
 var todoSchema = new mongoose.Schema({

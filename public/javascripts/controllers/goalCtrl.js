@@ -8,7 +8,7 @@ app.controller('goalCtrl', function($scope, overviewFactory, goalFactory) {
 		$scope.unitPrice = data;
 	});
 	$scope.remaining = function(){
-		return ($scope.goalAmount-$scope.totalEarned)*$scope.unitPrice
+		return Math.ceil(($scope.goalAmount-$scope.totalEarned)/$scope.unitPrice)
 	}
 	$scope.percent = function(){
 		return Math.floor(($scope.totalEarned/$scope.goalAmount)*100)

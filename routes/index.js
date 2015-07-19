@@ -102,19 +102,11 @@ router.post('/addGoal', function(req, res, next) {
 
 
 router.put('/updateSettings', function(req, res, next) {
-	console.log(req.body.price)
-	model.Youth.findOneAndUpdate({
-		'firstName': 'Kaito',
-		'products.productName': 'Pizza'
-	}, {
-		$set: {
-			"products.$.price": req.body.price,
-			"products.$.productName": req.body.productName
-		}
-	}, function(err, data) {
-		console.log(data)
-		console.log('here')
-	})
+console.log(req.body.price)
+model.Youth.findOneAndUpdate({ 'firstName': 'Kaito' , 'products.secret':'thisOne'}, {$set: {"products.$.price" : req.body.price, "products.$.productName" : req.body.productName}}, function(err, data){
+console.log(err, data)
+res.send(data)
+})
 })
 
 router.post('/addTodo', function(req, res, next) {

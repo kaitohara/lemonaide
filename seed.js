@@ -171,8 +171,9 @@ var data = {
                 costPerUnit: 4.50,
                 unitsPerProduct: .125
             })],
-            price: 3,
-            numberSold:27
+            price: 0,
+            numberSold:0,
+            secret: "thisOne"
         })],
         todo: [new models.Todo({
             todo: "Buy toppings",

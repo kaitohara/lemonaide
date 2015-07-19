@@ -166,7 +166,20 @@ path:hover {
 	margin-left: 31%;
 	transform: rotate(5deg);
 }
-.login:hover, .signup:hover {
+
+.splash-img-container .donors {
+	letter-spacing: 3px;
+	text-decoration: none;
+	color: black;
+	font-size: 19px;
+	text-align: initial;
+	position: absolute;
+	margin-top: 26%;
+	margin-left: 3%;
+	transform: rotate(5deg);
+}
+
+.login:hover, .signup:hover, .donors:hover {
 	transition: 0.5s;
 	color: white;
 }
@@ -277,7 +290,7 @@ h3, h4 {
 }
 
 .navbar-header .navbar-brand span {
-	color: #30a5ff;
+	color: #FFB53E;
 }
 
 /*Buttons*/
