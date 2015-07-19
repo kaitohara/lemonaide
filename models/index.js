@@ -77,7 +77,11 @@ var youthSchema = new mongoose.Schema({
 	products: [productSchema],
 	goalDescription: String,
 	goalAmount: Number,
-	todo: [todoSchema]
+	todo: [todoSchema],
+	charityOfChoice: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: "Charity"
+	}
 })
 
 var charitySchema = new mongoose.Schema({

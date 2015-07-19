@@ -1,0 +1,14 @@
+<h1 style = "text-align: center"> Finally, choose a charity you'd like to support! </h1>
+<div class = "charity col-lg-3" ng-repeat= "charity in charities.data" style = "margin: 0; padding: 0 10px">
+<img class = "img-responsive" src = "{{charity.imgUrl}}" style = "width: 100"></img>
+<h3> {{charity.name}}</h3>
+<a href = "{{charity.websiteUrl}}">{{charity.name}}</a>
+<p> {{charity.charityBlurb}}</p>
+		<button  
+				type="submit" 
+				ui-sref="dashboard.overview"
+				class="spin btn btn-lg action fave hvr-grow" 
+				aria-hidden="true" ng-click ="signUp(charity, signupUser)"><i class="glyphicon glyphicon-chevron-right" ></i></button>
+</div>
+
+<!-- ui-sref="dashboard.overview" -->

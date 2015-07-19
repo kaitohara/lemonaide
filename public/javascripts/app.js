@@ -33,6 +33,10 @@ app.config(function($stateProvider, $locationProvider) {
 			url: "/business-statement",
 			templateUrl: "templates/signup-questions/business-statement.html"
 		})
+	.state("signup.charity-pick", {
+			url: "/charity-picker",
+			templateUrl: "templates/signup-questions/charityPick.html"
+		})
 		.state("dashboard", {
 			url: "/dashboard",
 			controller: 'dashboardCtrl',

@@ -134,12 +134,6 @@ path:hover {
 	padding-top: 9%;
 }
 
-.splash-img-container img {
-	width: 100%;
-	display: block;
-	z-index: 100;
-}
-
 .splash-img-container h3 {
 	text-align: center;
 	word-wrap:break-word;
@@ -183,7 +177,7 @@ path:hover {
 	background-color: green;
 	width: 100%;
 	left: 0;
-	margin-top: -3.1%;
+	margin-top: -5%;
 	height: 20%;
 }
 body {
