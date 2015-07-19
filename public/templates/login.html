@@ -13,10 +13,10 @@
 <div class="col-lg-5 col-md-5 col-sm-6 col-xs-6 center-block vertical-center centered" id="signup-block">
 		<h3 class='sneet' >Log In</h3>
 		<div>
-    		<p><a href="#" id="signUpLink">New to Lemonaide? Sign up here!</a></p>
+    		<p><a ui-sref="signup" id="signUpLink">New to Lemonaide? Sign up here!</a></p>
 		</div>
 		
-		<form action="/loggedin" method="POST">
+		<form>
 			<div class="form-group">
 				<input name="firstName" type="text" class="form-control" id="firstName" placeholder="First Name" maxlength="32">
 
@@ -28,7 +28,7 @@
 			</div>
 			<div class="checkbox">
 				<!-- <button type="submit" class="btn btn-default">Submit</button> -->
-				<button type="submit" class="btn btn-lg action fave hvr-grow" aria-hidden="true"><i class="spin glyphicon glyphicon-chevron-right"></i></button>
+				<button ui-sref = "overview" type="submit"class="btn btn-lg action fave hvr-grow" aria-hidden="true"><i class="spin glyphicon glyphicon-chevron-right"></i></button>
 			</div>
 		</form>
 	</div>

@@ -24,13 +24,13 @@ router.get('/todo', function(req, res, next) {
 	res.sendFile(index);
 });
 
-router.get('/login', function(req, res, next) {
-	var index = path.join(__dirname, '..', 'public', 'templates', 'login.html');
-	res.sendFile(index);
-})
-router.get('/signup', function(req, res, next) {
-	var index = path.join(__dirname, '..', 'public', 'templates', 'signup.html');
-	res.sendFile(index);
-})
+// router.get('/login', function(req, res, next) {
+// 	var index = path.join(__dirname, '..', 'public', 'templates', 'login.html');
+// 	res.sendFile(index);
+// })
+// router.get('/signup', function(req, res, next) {
+// 	var index = path.join(__dirname, '..', 'public', 'templates', 'signup.html');
+// 	res.sendFile(index);
+// })
 
 module.exports = router;
