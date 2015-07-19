@@ -28,11 +28,11 @@
 						<ul class="todo-list">
 						<li class="todo-list-item" ng-repeat="todo in todos" >
 								<div class="checkbox" ng-model="todos.done">
-									<input type="checkbox" id="checkbox" />
+									<input type="checkbox" id="checkbox" ng-model="todo.done" ng-change="updateTodo(todo.todo, todo.done)" />
 									<label for="checkbox">{{todo.todo}}</label>
 								</div>
 					 			<div class="pull-right action-buttons">
-									<a href="#" class="trash"><span class="glyphicon glyphicon-trash"></span></a>
+									<a class="trash"><span class="glyphicon glyphicon-trash" ng-click="removeTodo(todo.todo)"></span></a>
 								</div>
 							</li>
 						</ul>
