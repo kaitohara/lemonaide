@@ -17,6 +17,17 @@ Version 1.0
 	src: url("../fonts/Edmondsans-Bold.otf");
 }
 
+@font-face {
+	font-family: "Dosis";
+	src: url("../fonts/dosis.woff2");
+}
+
+@font-face {
+	font-family: 'Arial Rounded Bold';
+	src: url("../fonts/ArialRoundedBold.ttf");
+}
+/*@import url('//fonts.googleapis.com/css?family=Dosis');*/
+
 	 @-moz-keyframes myfirst
 	{
 		0%   {background:yellow}
