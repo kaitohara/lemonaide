@@ -52,6 +52,11 @@ app.config(function($stateProvider, $locationProvider) {
 			templateUrl: '/templates/todo.html',
 			controller: "todoCtrl"
 		})
+		.state("dashboard.goal", {
+			url: '/goal',
+			templateUrl: '/templates/goal.html',
+			controller: "goalCtrl"
+		})
 		// .state("dashboard.update", {
 		// 	url: '/update',
 		// 	templateUrl: '/templates/update.html',
