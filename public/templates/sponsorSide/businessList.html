@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div ng-repeat="business in youthBusinesses" class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail">
+                <img src="http://placehold.it/320x150" alt="">
+                <div class="caption">
+                    <h4 class="pull-right">See Biz</h4>
+                    <h4><a href="#">{{business.firstName}} {{buesiness.lastName}}</a>
+                        </h4>
+                    <p>{{business.businessName}}</p>
+                    <p>{{business.businessSummary}}</p>
+                    <p>{{business.selfSummary}}</p>
+                    <p>{{business.region}}</p>
+                    <p>Button to Donate</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
