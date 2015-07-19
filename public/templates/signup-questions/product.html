@@ -1,9 +1,9 @@
 <div class="col-lg-5 col-md-5 col-sm-6 col-xs-6 center-block vertical-center centered" id="signup-block">
-	<h3 class='sneet' >That sounds like a great product! How would you describe your business?</h3>
-	<p><i>Example: I want to make the world's most sour lemonade!</i></p>
-	<form method="PUT">
+	<h3 class='sneet' >Sounds great! What are you trying to sell?</h3>
+	<p><i>Example: Lemonade</i></p>
+	<form>
 		<div class="form-group">
-			<textarea name="businessName" type="text" class="form-control" id="businessName" maxlength="32"></textarea>
+			<textarea name="businessProduct" type="text" class="form-control" id="businessProduct" maxlength="32" ng-model="signupUser.products"></textarea>
 		</div>
 		<button ui-sref="signup.business-statement" 
 				type="submit" 

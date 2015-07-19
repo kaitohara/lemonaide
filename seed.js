@@ -165,7 +165,15 @@ var data = {
                 costPerUnit: 4.50,
                 unitsPerProduct: .125
             })],
-            price: 3
+            price: 3,
+            numberSold:27
+        })],
+        todo: [new models.Todo({
+            todo: "Buy toppings",
+            done: false
+        }), new models.Todo({
+            todo: "Make menu",
+            done: false
         })]
     }, {
         firstName: 'Greg',

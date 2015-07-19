@@ -1,11 +1,12 @@
 <div class="centered">
 		<div class="col-lg-5 col-md-5 col-sm-6 col-xs-6 center-block vertical-center centered" id="login-block">
-			
-			<form method="PUT">
+		<h3 class='sneet' >Hi there, what's your name?</h3>
+			<form>
 				<div class="form-group">
-					<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+					<input type="firstname" class="form-control" id="exampleInputEmail1" placeholder="First Name" ng-model = "signupUser.firstName">
 				
-					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+					<input type="lastname" class="form-control" id="exampleInputPassword1" placeholder="Last Name" ng-model = "signupUser.lastName">
+					{{signupUser}}
 				</div>
 				<button ui-sref="signup.business-name" 
 						type="submit" 
@@ -14,3 +15,41 @@
 			</form>
 		</div>
 	</div>
+
+<!-- 
+	signupUser
+
+	var youthSchema = new mongoose.Schema({
+	//first name of child
+	firstName: {
+		type: String,
+		required: true
+	},
+	//last name in child
+	lastName: {
+		type: String,
+		required: true
+	},
+	password: {
+		type: String,
+		required: true
+	},
+	//their age (not required)
+	age: Number,
+	//name of their business (definitely required)
+	businessName: {
+		type: String,
+		required: true
+	},
+	//what their business does
+	businessSummary: {
+		type: String,
+		required: true
+	},
+	//an optional blurb about themselves.
+	selfSummary: String,
+	//an optional mention for the region they live in.
+	region: String,
+	//what they sell (will relate to product schema)
+	products: [productSchema]
+}) -->

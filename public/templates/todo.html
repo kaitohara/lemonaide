@@ -12,78 +12,26 @@
 
 <body>	
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">To-Do List</h1>
+			</div>
+		</div><!--/.row-->
 								
 		<div class="row">
 			
-			<div class="col-md-4">
+			<div class="col-md-6 col-center">
 			
 				<div class="panel panel-blue">
 					<div class="panel-heading dark-overlay"><span class="glyphicon glyphicon-check"></span>To-do List</div>
 					<div class="panel-body">
 						<ul class="todo-list">
-						<li class="todo-list-item">
-								<div class="checkbox">
+						<li class="todo-list-item" ng-repeat="todo in todos" >
+								<div class="checkbox" ng-model="todos.done">
 									<input type="checkbox" id="checkbox" />
-									<label for="checkbox">Make a plan for today</label>
+									<label for="checkbox">{{todo.todo}}</label>
 								</div>
 					 			<div class="pull-right action-buttons">
-									<a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
-									<a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a>
-									<a href="#" class="trash"><span class="glyphicon glyphicon-trash"></span></a>
-								</div>
-							</li>
-							<li class="todo-list-item">
-								<div class="checkbox">
-									<input type="checkbox" id="checkbox" />
-									<label for="checkbox">Update Basecamp</label>
-								</div>
-								<div class="pull-right action-buttons">
-									<a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
-									<a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a>
-									<a href="#" class="trash"><span class="glyphicon glyphicon-trash"></span></a>
-								</div>
-							</li>
-							<li class="todo-list-item">
-								<div class="checkbox">
-									<input type="checkbox" id="checkbox" />
-									<label for="checkbox">Send email to Jane</label>
-								</div>
-								<div class="pull-right action-buttons">
-									<a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
-									<a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a>
-									<a href="#" class="trash"><span class="glyphicon glyphicon-trash"></span></a>
-								</div>
-							</li>
-							<li class="todo-list-item">
-								<div class="checkbox">
-									<input type="checkbox" id="checkbox" />
-									<label for="checkbox">Drink coffee</label>
-								</div>
-								<div class="pull-right action-buttons">
-									<a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
-									<a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a>
-									<a href="#" class="trash"><span class="glyphicon glyphicon-trash"></span></a>
-								</div>
-							</li>
-							<li class="todo-list-item">
-								<div class="checkbox">
-									<input type="checkbox" id="checkbox" />
-									<label for="checkbox">Do some work</label>
-								</div>
-								<div class="pull-right action-buttons">
-									<a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
-									<a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a>
-									<a href="#" class="trash"><span class="glyphicon glyphicon-trash"></span></a>
-								</div>
-							</li>
-							<li class="todo-list-item">
-								<div class="checkbox">
-									<input type="checkbox" id="checkbox" />
-									<label for="checkbox">Tidy up workspace</label>
-								</div>
-								<div class="pull-right action-buttons">
-									<a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
-									<a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a>
 									<a href="#" class="trash"><span class="glyphicon glyphicon-trash"></span></a>
 								</div>
 							</li>
@@ -91,9 +39,9 @@
 					</div>
 					<div class="panel-footer">
 						<div class="input-group">
-							<input id="btn-input" type="text" class="form-control input-md" placeholder="Add new task" />
+							<input id="btn-input" type="text" class="form-control input-md" ng-model="newTodo.todo" placeholder="Add new task" />
 							<span class="input-group-btn">
-								<button class="btn btn-primary btn-md" id="btn-todo">Add</button>
+								<button ng-click="addTodo(newTodo)"class="btn btn-primary btn-md" id="btn-todo">Add</button>
 							</span>
 						</div>
 					</div>
