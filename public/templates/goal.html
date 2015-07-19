@@ -19,28 +19,73 @@
 				<h1 class="page-header">Goal</h1>
 			</div>
 		</div><!--/.row-->
-				
 
+		<div class="row" ng-show="showSuccess">
+			<div class="col-lg-12">
+				<h1 class="page-header">New goal succesfully added!</h1>
+			</div>
+		</div><!--/.row-->
 
-		<div class="progress">
+		<div class="progress" ng-show="!!goalDescription">
 		  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow={{percent()}}
 		  aria-valuemin="0" aria-valuemax="100" style="width:{{percent()}}%">
 		    {{percent()}}% Towards Goal
 		  </div>
 		</div>
 
+		<div class="row" ng-show="!goalDescription">
+			<div class="col-xs-12 col-md-12 col-lg-12">
+				
+				<h3>You don't have a goal yet. Why don't you add one?</h3>
+				<div class="panel panel-red panel-widget ">
+
+					<div class="row no-padding">
+						<div class="col-sm-3 col-lg-3 widget-left">
+							<em class="glyphicon glyphicon-plus glyphicon-l"></em>
+						</div>
+						<div class="col-sm-9 col-lg-7 widget-right">
+							<div class="large">Add a New Goal</div>
+							<div class="text-muted">New Orders</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+					<!-- <div class="panel-heading">Lemonade</div> -->
+					<div class="panel-body">
+						<div class="col-md-6">
+							<form ng-submit="addGoal(addedGoal)">
+							
+								<div class="form-group">
+									<label>Goal Description</label>
+									<input class="form-control" placeholder="Enter any goal you want to earn money for, like a new bike or donating to charity!"ng-model="addedGoal.description">
+								</div>
+
+								<div class="form-group">
+									<label>Goal Amount in Dollars</label>
+									<input class="form-control" placeholder="How much do you want to charge for your product?" ng-model="addedGoal.amount">
+								</div>
+
+								<button type="submit" class="btn btn-block btn-primary">Add My Goal!</button>	
+							</div>
+						</form>
+					</div>
+				</div>
+		</div>
+
 		
 		
-		<div class="row">
+		<!-- once user has goal -->
+		<div class="row" ng-show="!!goalDescription">
 			<div class="col-xs-12 col-md-6 col-lg-6">
 				<div class="panel panel-blue panel-widget ">
 					<div class="row no-padding">
 						<div class="col-sm-3 col-lg-3 widget-left">
-							<em class="glyphicon glyphicon-shopping-cart glyphicon-l"></em>
+							<em class="glyphicon glyphicon-record glyphicon-l"></em>
 						</div>
 						<div class="col-sm-9 col-lg-7 widget-right">
 							<div class="large">{{goalDescription}}</div>
-							<div class="text-muted">New Orders</div>
+							<div class="text-muted">Goal Description</div>
 						</div>
 					</div>
 				</div>
@@ -49,7 +94,7 @@
 				<div class="panel panel-orange panel-widget">
 					<div class="row no-padding">
 						<div class="col-sm-3 col-lg-3 widget-left">
-							<em class="glyphicon glyphicon-comment glyphicon-l"></em>
+							<em class="glyphicon glyphicon-piggy-bank glyphicon-l"></em>
 						</div>
 						<div class="col-sm-9 col-lg-7 widget-right">
 							<div class="large">${{goalAmount}}</div>
@@ -62,7 +107,7 @@
 				<div class="panel panel-teal panel-widget">
 					<div class="row no-padding">
 						<div class="col-sm-3 col-lg-3 widget-left">
-							<em class="glyphicon glyphicon-user glyphicon-l"></em>
+							<em class="glyphicon glyphicon-usd glyphicon-l"></em>
 						</div>
 						<div class="col-sm-9 col-lg-7 widget-right">
 							<div class="large">${{totalEarned}}</div>
@@ -80,6 +125,19 @@
 						<div class="col-sm-9 col-lg-7 widget-right">
 							<div class="large">{{percent()}}%</div>
 							<div class="text-muted">Percent of Goal</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-6 col-lg-6">
+				<div class="panel panel-red panel-widget">
+					<div class="row no-padding">
+						<div class="col-sm-3 col-lg-3 widget-left">
+							<em class="glyphicon glyphicon-stats glyphicon-l"></em>
+						</div>
+						<div class="col-sm-9 col-lg-8 widget-right">
+							<div class="large">Sell {{remaining()}} more pizzas</div>
+							<div class="text-muted">to reach your Goal</div>
 						</div>
 					</div>
 				</div>

@@ -10,8 +10,13 @@ Version 1.0
  }
 @font-face {
 	font-family: "Comic";
-	src: url("../fonts/comicNeue/ComicNeue-Regular.otf");
+	src: url("../fonts/comicNeue/ComicNeue-Angular_Bold.otf");
 }
+@font-face {
+	font-family: "Edmond";
+	src: url("../fonts/Edmondsans-Bold.otf");
+}
+
 	 @-moz-keyframes myfirst
 	{
 		0%   {background:yellow}
@@ -1016,4 +1021,11 @@ h1.page-header {
 }
 .fixed-table-pagination .pagination-detail {
 	margin-top: 20px;
+}
+.dashboard{
+	font-size: 1.4em;
+}
+.col-center {
+	float: none;
+    margin: 0 auto;
 }

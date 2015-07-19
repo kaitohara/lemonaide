@@ -11,6 +11,10 @@ app.factory("goalFactory", function($http) {
 				console.log(response.data[0].products[0].price)
 				return response.data[0].products[0];
 			});
+		},
+		addGoal: function(newGoal) {
+			console.log(newGoal)
+			return $http.post('/addGoal', {data:newGoal})
 		}
 
 	}

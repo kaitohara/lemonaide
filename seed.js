@@ -168,8 +168,13 @@ var data = {
             price: 3,
             numberSold:27
         })],
-        goalDescription: "New Bike",
-        goalAmount: 200
+        todo: [new models.Todo({
+            todo: "Buy toppings",
+            done: false
+        }), new models.Todo({
+            todo: "Make menu",
+            done: false
+        })]
     }, {
         firstName: 'Greg',
         lastName: 'M',
