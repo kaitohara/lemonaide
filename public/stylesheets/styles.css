@@ -42,7 +42,7 @@ Version 1.0
 	-webkit-animation:myfirst 5s infinite; */
 svg {
 	z-index: 99;
-animation: float 16s infinite;
+animation: float 25s infinite;
 margin-left: 56%;
 margin-top: -7%;
 position: absolute;
