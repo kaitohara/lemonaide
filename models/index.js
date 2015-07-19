@@ -32,7 +32,8 @@ var productSchema = new mongoose.Schema({
 	price: {
 		type: Number,
 		required: true
-	}
+	},
+	numberSold: { type: Number, default: 0 }
 })
 
 var youthSchema = new mongoose.Schema({
