@@ -74,23 +74,21 @@ app.config(function($stateProvider, $locationProvider) {
 		})
 		.state("detail", {
 			url: '/youthBusiness/detail/:firstName',
-			resolve: {
-				resolvedBiz: function($http, $stateParams){
-					return $http.get('/youthList/detail/'
-						+$stateParams.bizId)
-				}
+			// resolve: {
+			// 	resolvedBiz: function($http, $stateParams){
+			// 		return $http.get('/youthList/detail/'
+			// 			+$stateParams.bizId)
+			// 	}
+			// },
+			controller: function($http, $scope, $stateParams) {
+			    return $http.get('/youthList/detail/' + $stateParams.firstName).then(function(biz) {
+			        $scope.biz = biz;
+			    })
 			},
-			controller: function($scope){
-				$scope.biz = resolvedBiz();
-			},
-			template: '<p>stuffff</p><br><p>{{biz}}</p>'
-
+			template: "<div class='container'><div class='row'><div class='col-sm-12 col-lg-12 col-md-12'><div class='thumbnail'><img class='roundedIMG' src='{{biz.data.photo}}'><div class='caption'><button class='btn pull-right'><a>Sponsor</a></button><h4><a ui-sref='detail'>{{biz.data.firstName}} {{biz.data.lastName}}</a></h4><p>{{biz.data.selfSummary}}</p><p>Business Name: {{biz.data.businessName}}</p><p>{{biz.data.businessSummary}}</p><p>{{biz.data.region}}</p></div></div></div></div></div>"
 		})
 
 		// resolve: {
-  //       	// resCard: function($stateParams, FlashCardFactory){
-  //       	// 	return FlashCardFactory.getOne($stateParams.cardId).then(null, console.log)
-  //       	// }
   //       	resCard: function($http, $stateParams){
   //       		return $http.get('/cards/'+ $stateParams.cardId)
   //       	}
