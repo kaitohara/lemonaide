@@ -171,13 +171,6 @@ var data = {
             price: 0,
             numberSold: 0,
             secret: "thisOne"
-        })],
-        todo: [new models.Todo({
-            todo: "Buy toppings",
-            done: false
-        }), new models.Todo({
-            todo: "Make menu",
-            done: false
         })]
     }, {
         firstName: 'Greg',

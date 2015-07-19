@@ -23,7 +23,8 @@ app.controller('goalCtrl', function($rootScope, $scope, overviewFactory, goalFac
 		// $scope.$on('numberUpdate', function(){
 
 		// })
-		$scope.totalEarned = $rootScope.numberSoldToday*data.price
+		var num = $rootScope.numberSoldToday || 0;
+		$scope.totalEarned = num*data.price
 	})
 	$scope.addGoal = function(newGoal){
 		console.log(newGoal)
