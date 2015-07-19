@@ -8,6 +8,12 @@ Version 1.0
   font-family: "BrushStroke";
   src: url("../fonts/LEVIBRUSH.TTF");
  }
+@font-face {
+	font-family: "Comic";
+	src: url("../fonts/comicNeue/ComicNeue-Regular.otf");
+}
+
+
 
  .splash-img-container{
  	width: 40%;
@@ -39,6 +45,7 @@ body {
 	background: #f1f4f7;
 	padding-top: 50px;
 	color: #5f6468;
+	font-family: 'Comic'
 }
 
 p {
