@@ -940,6 +940,7 @@ h1.page-header {
 	list-style: none;
 	line-height: 0.9;
 	padding: 14px 15px 8px 15px;
+	font-size: 2em;
 }
 
 .todo-list-item:hover, a.todo-list-item:focus {
@@ -1034,4 +1035,17 @@ h1.page-header {
 .roundedIMG {
 	border-radius:100%;
 	width: 70%;
+}
+
+.addproductform {
+	margin-top:0px;
+	font-size:2em;
+}
+.todo-input {
+	font-size:2em;
+}
+
+.add-button {
+	margin-top:20px;
+	font-size: 1em;
 }
