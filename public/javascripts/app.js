@@ -85,7 +85,7 @@ app.config(function($stateProvider, $locationProvider) {
 			        $scope.biz = biz;
 			    })
 			},
-			template: "<div class='container'><div class='row'><div class='col-sm-12 col-lg-12 col-md-12'><div class='thumbnail'><img class='roundedIMG' src='{{biz.data.photo}}'><div class='caption'><button class='btn pull-right'><a>Sponsor</a></button><h4><a ui-sref='detail'>{{biz.data.firstName}} {{biz.data.lastName}}</a></h4><p>{{biz.data.selfSummary}}</p><p>Business Name: {{biz.data.businessName}}</p><p>{{biz.data.businessSummary}}</p><p>{{biz.data.region}}</p></div></div></div></div></div>"
+			template: "<div class='container'><div class='row'><div class='col-sm-12 col-lg-12 col-md-12'><div class='thumbnail'><img class='roundedIMG detailPageIMG' src='{{biz.data.photo}}'><div class='caption'><button class='btn pull-right'><a>Sponsor</a></button><h4><a ui-sref='detail'>{{biz.data.firstName}} {{biz.data.lastName}}</a></h4><p>{{biz.data.selfSummary}}</p><p>Business Name: {{biz.data.businessName}}</p><p>{{biz.data.businessSummary}}</p><p>{{biz.data.region}}</p></div></div></div></div></div>"
 		})
 
 		// resolve: {
