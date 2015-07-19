@@ -7,4 +7,9 @@ app.config(function($stateProvider, $locationProvider) {
 			url: "/",
 			templateUrl: '/templates/splashPage.html'
 		})
+		// .state("login", {})
+		// .state("signup",{})
+		// .state("signup.section1", {})
+		// .state("signup.section2", {})
+		// .state("dashboard", {})
 })

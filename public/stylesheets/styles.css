@@ -3,8 +3,11 @@ Lumino Admin Bootstrap Template
 Version 1.0
 */
 
-
 /*Global Styles*/
+@font-face {
+  font-family: "BrushStroke";
+  src: url("../fonts/LEVIBRUSH.TTF");
+ }
 
 body {
 	background: #f1f4f7;
