@@ -24,6 +24,12 @@ router.get('/todo', function(req, res, next) {
 	res.sendFile(index);
 });
 
+router.get('/youthList', function(req, res, next) {
+	model.Youth.find().exec().then(function(youthList){
+		res.json(youthList)
+	})
+});
+
 // router.get('/login', function(req, res, next) {
 // 	var index = path.join(__dirname, '..', 'public', 'templates', 'login.html');
 // 	res.sendFile(index);
