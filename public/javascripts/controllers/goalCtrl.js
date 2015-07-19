@@ -11,7 +11,7 @@ app.controller('goalCtrl', function($scope, overviewFactory, goalFactory) {
 		return ($scope.goalAmount-$scope.totalEarned)*$scope.unitPrice
 	}
 	$scope.percent = function(){
-		return ($scope.totalEarned/$scope.goalAmount)*100
+		return Math.floor(($scope.totalEarned/$scope.goalAmount)*100)
 	}
 	goalFactory.getGoal().then(function(data){
 		$scope.goalDescription = data.goalDescription;

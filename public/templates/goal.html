@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lemonaide - Dashboard</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lemonaide - Dashboard</title>
 
-<link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
-<link rel="stylesheet" href="/stylesheets/styles.css">
+	<link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+	<link rel="stylesheet" href="/stylesheets/styles.css">
 
 </head>
 
 <body>
-		
+
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
 		
 		<div class="row">
@@ -27,53 +27,62 @@
 		</div><!--/.row-->
 
 		<div class="progress" ng-show="!!goalDescription">
-		  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow={{percent()}}
-		  aria-valuemin="0" aria-valuemax="100" style="width:{{percent()}}%">
-		    {{percent()}}% Towards Goal
-		  </div>
-		</div>
+			<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow={{percent()}}
+			aria-valuemin="0" aria-valuemax="100" style="width:{{percent()}}%">
+			{{percent()}}% Towards Goal
+			</div>
 
-		<div class="row" ng-show="!goalDescription">
+		</div>
+	<form ng-submit="addGoal(addedGoal)" ng-show="!goalDescription">
+		<div class="row" >
 			<div class="col-xs-12 col-md-12 col-lg-12">
-				
-				<h3>You don't have a goal yet. Why don't you add one?</h3>
+				<!-- <h3>You don't have a goal yet. Why don't you add one?</h3> -->
 				<div class="panel panel-red panel-widget ">
 
 					<div class="row no-padding">
-						<div class="col-sm-3 col-lg-3 widget-left">
+						<div class="col-sm-1 col-lg-1 widget-left">
 							<em class="glyphicon glyphicon-plus glyphicon-l"></em>
 						</div>
-						<div class="col-sm-9 col-lg-7 widget-right">
-							<div class="large">Add a New Goal</div>
-							<div class="text-muted">New Orders</div>
+						<div class="col-sm-3 col-lg-9 widget-right">
+							<div class="row">
+								<div class="col-sm-4  col-lg-4">
+									<div class="large">Goal Description:</div>
+									<div class="text-muted">Example: 'Donate to Charity!'</div>
+								</div>
+								<div class="col-sm-8  col-lg-8">
+									<input class="addproductform form-control" placeholder="Type here" ng-model="addedGoal.description">
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="panel panel-default">
-					<!-- <div class="panel-heading">Lemonade</div> -->
-					<div class="panel-body">
-						<div class="col-md-6">
-							<form ng-submit="addGoal(addedGoal)">
-							
-								<div class="form-group">
-									<label>Goal Description</label>
-									<input class="form-control" placeholder="Enter any goal you want to earn money for, like a new bike or donating to charity!"ng-model="addedGoal.description">
-								</div>
+			<div class="col-xs-12 col-md-12 col-lg-12">
 
-								<div class="form-group">
-									<label>Goal Amount in Dollars</label>
-									<input class="form-control" placeholder="How much do you want to charge for your product?" ng-model="addedGoal.amount">
-								</div>
+				<!-- <h3>You don't have a goal yet. Why don't you add one?</h3> -->
+				<div class="panel panel-red panel-widget ">
 
-								<button type="submit" class="btn btn-block btn-primary">Add My Goal!</button>	
+					<div class="row no-padding">
+						<div class="col-sm-1 col-lg-1 widget-left">
+							<em class="glyphicon glyphicon-plus glyphicon-l"></em>
+						</div>
+						<div class="col-sm-3 col-lg-9 widget-right">
+							<div class="row">
+								<div class="col-sm-4  col-lg-4">
+									<div class="large">Goal Amount:</div>
+									<div class="text-muted">Example: '$50'</div>
+								</div>
+								<div class="col-sm-8  col-lg-8">
+									<input class="addproductform form-control" placeholder="Type here" ng-model="addedGoal.amount">
+								</div>
 							</div>
-						</form>
+						</div>
 					</div>
 				</div>
+				<button type="submit" class="btn btn-block btn-primary">Add My Goal!</button>
+			</div>
 		</div>
-
-		
+	</form>
 		
 		<!-- once user has goal -->
 		<div class="row" ng-show="!!goalDescription">
@@ -145,7 +154,7 @@
 		</div><!--/.row-->
 	</div>	<!--/.main-->
 
-<script src="/scripts/jquery.min.js"></script>
+	<script src="/scripts/jquery.min.js"></script>
 	
 </body>
 
