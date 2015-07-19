@@ -31,6 +31,7 @@ router.get('/youthList', function(req, res, next) {
 	})
 });
 
+
 router.get('/youth', function(req, res, next) {
 	model.Youth.find({
 		firstName: 'Kaito'
