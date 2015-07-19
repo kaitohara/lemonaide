@@ -23,15 +23,14 @@
             <div class="thumbnail">
                 <img class='roundedIMG' src="{{business.photo}}">
                 <div class="caption">
-                    <h4 class="pull-right">See Bizzzz</h4>
-                    <h4><a href="#">{{business.firstName}} {{business.lastName}}</a>
-                        </h4>
+                    <button class="btn pull-right" ng-click="goDetail(business.firstName)"><a>Sponsor</a></button>
+                    <h4>
+                        <a ui-sref="detail">{{business.firstName}} {{business.lastName}}</a>
+                    </h4>
                     <p>{{business.selfSummary}}</p>
                     <p>Business Name: {{business.businessName}}</p>
                     <p>{{business.businessSummary}}</p>
-                    
                     <p>{{business.region}}</p>
-                    <p>Button to Donate</p>
                 </div>
             </div>
         </div>

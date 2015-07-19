@@ -1,4 +1,4 @@
-app.controller('businessListCtrl', function($http, $scope) {
+app.controller('businessListCtrl', function($http, $scope, $state) {
     
     (function() {
         $http.get('/youthList')
@@ -7,5 +7,12 @@ app.controller('businessListCtrl', function($http, $scope) {
             })
     })()
 
+    $scope.goDetail = function(firstName){
+    	$http.get('/youthList/detail/'+firstName)
+            .then(function(biz) {
+            	console.log(biz.data)
+                $state.go("detail", {firstName: biz.data.firstName});
+            })
+    }
 
 })

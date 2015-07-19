@@ -50,7 +50,7 @@ var data = {
         lastName: 'M',
         password: 'apple',
         age: 12,
-        businessName: 'Yea Whoo',
+        businessName: 'YeaWhoo',
         businessSummary: "I'm only 12, but I have a feeling this will be a big thing one day - I want to sell people's attention to advertisers, but I'm not sure how yet.",
         selfSummary: "Hi my name is Marissa and I'm going to be powerful when I'm older",
         region: 'California',
@@ -153,7 +153,7 @@ var data = {
         age: 8,
         businessName: 'Awesome Pizza',
         businessSummary: 'I want to make custom pizzas for people in my neighborhood',
-        selfSummary: 'I looove pizza and putting different toppings on pizzas!',
+        selfSummary: 'I looove pizza and putting different toppings on pizzas! My favorite is pepperoni.',
         region: 'New York',
         photo: '../../images/bart-simpson-mooning.jpg',
         products: [new models.Product({
@@ -186,15 +186,15 @@ var data = {
         lastName: 'M',
         password: 'apple',
         age: 9,
-        businessName: 'Swimsuits',
-        businessSummary: 'I want to make cool swimsuits',
-        selfSummary: 'I like to swimm in swimsuits!',
+        businessName: 'Weapons',
+        businessSummary: 'My plan is to take over the world.',
+        selfSummary: 'I like to be evil and come up with evil plans to take over the world!',
         region: 'Boston',
         photo: '../../images/stewie.jpg',
         products: [new models.Product({
-            productName: 'Swimsuit',
+            productName: 'Rocket',
             ingredients: [new models.Ingredient({
-                ingredientName: 'latex',
+                ingredientName: 'metal',
                 costPerUnit: 20,
                 unitsPerProduct: 1
             })],

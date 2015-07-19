@@ -30,7 +30,13 @@ router.get('/youthList', function(req, res, next) {
 		res.json(youthList)
 	})
 });
-
+router.get('/youthList/detail/:firstName', function(req, res, next) {
+	model.Youth.findOne({ firstName: req.params.firstName }).exec()
+	//or {id: $stateParams.id} ??
+		.then(function(biz) {
+			res.json(biz)
+		})
+});
 
 router.get('/youth', function(req, res, next) {
 	model.Youth.find({

@@ -68,6 +68,34 @@ app.config(function($stateProvider, $locationProvider) {
 			templateUrl: '/templates/sponsorSide/businessList.html',
 			controller: "businessListCtrl"
 		})
+		.state("detail", {
+			url: '/youthBusiness/detail/:firstName',
+			resolve: {
+				resolvedBiz: function($http, $stateParams){
+					return $http.get('/youthList/detail/'
+						+$stateParams.bizId)
+				}
+			},
+			controller: function($scope){
+				$scope.biz = resolvedBiz();
+			},
+			template: '<p>stuffff</p><br><p>{{biz}}</p>'
+
+		})
+
+		// resolve: {
+  //       	// resCard: function($stateParams, FlashCardFactory){
+  //       	// 	return FlashCardFactory.getOne($stateParams.cardId).then(null, console.log)
+  //       	// }
+  //       	resCard: function($http, $stateParams){
+  //       		return $http.get('/cards/'+ $stateParams.cardId)
+  //       	}
+  //       },
+  //       controller: function(resCard, $scope){
+  //       	$scope.resolvedCard = resCard.data;
+  //       },
+
+
 		// .state("dashboard.update", {
 		// 	url: '/update',
 		// 	templateUrl: '/templates/update.html',
