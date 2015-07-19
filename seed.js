@@ -6,8 +6,7 @@ var async = require('async'),
     models = require('./models');
 
 var data = {
-    Youth: [
-    {
+    Youth: [{
         firstName: 'Steve',
         lastName: 'Jobs',
         password: 'apple',
@@ -19,33 +18,33 @@ var data = {
         photo: '../../images/mini-steve-jobs.jpg',
         // photo: 'http://cdn.parenting.com/sites/parenting.com/files/styles/facebook_og_image/public/mini-steve-jobs.jpg?itok=1xtepyRi',
         products: [new models.Product({
-            productName: 'iPhone',
-            ingredients: [new models.Ingredient({
-                ingredientName: 'internet',
-                costPerUnit: 1,
-                unitsPerProduct: 1
-            })],
-            price: 2
-        }),
-        new models.Product({
-            productName: 'iPod',
-            ingredients: [new models.Ingredient({
-                ingredientName: 'music',
-                costPerUnit: 1,
-                unitsPerProduct: 1
-            })],
-            price: 2
-        }), new models.Product({
-            productName: 'iTunes',
-            ingredients: [new models.Ingredient({
-                ingredientName: 'music',
-                costPerUnit: 1,
-                unitsPerProduct: 1
-            })],
-            price: 2
-        })]
-    },
-    {
+                productName: 'iPhone',
+                ingredients: [new models.Ingredient({
+                    ingredientName: 'internet',
+                    costPerUnit: 1,
+                    unitsPerProduct: 1
+                })],
+                price: 2
+            }),
+            new models.Product({
+                productName: 'iPod',
+                ingredients: [new models.Ingredient({
+                    ingredientName: 'music',
+                    costPerUnit: 1,
+                    unitsPerProduct: 1
+                })],
+                price: 2
+            }), new models.Product({
+                productName: 'iTunes',
+                ingredients: [new models.Ingredient({
+                    ingredientName: 'music',
+                    costPerUnit: 1,
+                    unitsPerProduct: 1
+                })],
+                price: 2
+            })
+        ]
+    }, {
         firstName: 'Marissa',
         lastName: 'M',
         password: 'apple',
@@ -56,33 +55,33 @@ var data = {
         region: 'California',
         photo: '../../images/mini-marissa-mayer.jpg',
         products: [new models.Product({
-            productName: 'News',
-            ingredients: [new models.Ingredient({
-                ingredientName: 'News',
-                costPerUnit: 1,
-                unitsPerProduct: 1
-            })],
-            price: 2
-        }),
-        new models.Product({
-            productName: 'Finance',
-            ingredients: [new models.Ingredient({
-                ingredientName: 'Finance',
-                costPerUnit: 1,
-                unitsPerProduct: 1
-            })],
-            price: 2
-        }), new models.Product({
-            productName: 'Sports',
-            ingredients: [new models.Ingredient({
-                ingredientName: 'Sports',
-                costPerUnit: 1,
-                unitsPerProduct: 1
-            })],
-            price: 2
-        })]
-    },
-    {
+                productName: 'News',
+                ingredients: [new models.Ingredient({
+                    ingredientName: 'News',
+                    costPerUnit: 1,
+                    unitsPerProduct: 1
+                })],
+                price: 2
+            }),
+            new models.Product({
+                productName: 'Finance',
+                ingredients: [new models.Ingredient({
+                    ingredientName: 'Finance',
+                    costPerUnit: 1,
+                    unitsPerProduct: 1
+                })],
+                price: 2
+            }), new models.Product({
+                productName: 'Sports',
+                ingredients: [new models.Ingredient({
+                    ingredientName: 'Sports',
+                    costPerUnit: 1,
+                    unitsPerProduct: 1
+                })],
+                price: 2
+            })
+        ]
+    }, {
         firstName: 'Bobby',
         lastName: 'McLemon',
         password: 'apple',
@@ -117,8 +116,7 @@ var data = {
             })],
             price: 3
         })]
-    },
-    {
+    }, {
         firstName: 'Christian',
         lastName: 'E',
         password: 'apple',
@@ -145,13 +143,12 @@ var data = {
             })],
             price: 2
         })]
-    },
-    {
+    }, {
         firstName: 'Kaito',
         lastName: 'H',
         password: 'apple',
         age: 8,
-        businessName: 'Awesome Pizza',
+        businessName: 'Dynamic Dollar Pizza',
         businessSummary: 'I want to make custom pizzas for people in my neighborhood',
         selfSummary: 'I looove pizza and putting different toppings on pizzas! My favorite is pepperoni.',
         region: 'New York',
@@ -172,7 +169,7 @@ var data = {
                 unitsPerProduct: .125
             })],
             price: 0,
-            numberSold:0,
+            numberSold: 0,
             secret: "thisOne"
         })],
         todo: [new models.Todo({
