@@ -34,20 +34,20 @@ Version 1.0
 
 	@-webkit-keyframes float
 	{#ffdb99
-		0%   {margin-left:53%;}
-		100%   {margin-left:-43%;}
+		0%   {margin-left:56%;}
+		100%   {margin-left:-49%;}
 	}
 /*	animation:myfirst 5s;
 	-moz-animation:myfirst 5s infinite;
 	-webkit-animation:myfirst 5s infinite; */
 svg {
 	z-index: 99;
-animation: float 15s;
-margin-left: 53%;
-margin-top: -8%;
+animation: float 16s infinite;
+margin-left: 56%;
+margin-top: -7%;
 position: absolute;
-  width: 50%;
-  height: 50%;
+  width: 25%;
+  height: 25%;
 }
 path {
   fill: white;
@@ -114,12 +114,23 @@ path:hover {
 	display: block;
 	z-index: 100;
 }
+.img-container{
+	padding-top: 9%;
+}
+
+.splash-img-container img {
+	width: 100%;
+	display: block;
+	z-index: 100;
+}
 
 .splash-img-container h3 {
 	text-align: center;
 	word-wrap:break-word;
 	letter-spacing: 10px;
+	padding-top: 11%;
 	display: block;
+	transform: rotate(-3deg);
 }
 
 .splash-img-container .login {
@@ -129,7 +140,7 @@ path:hover {
 	font-size: 19px;
 	text-align: initial;
 	position: absolute;
-	margin-top: 14%;
+	margin-top: 18%;
 	margin-left: 3%;
 	transform: rotate(-12deg);
 }
@@ -141,7 +152,7 @@ path:hover {
 	font-size: 19px;
 	text-align: initial;
 	position: absolute;
-	margin-top: 14%;
+	margin-top: 18%;
 	margin-left: 31%;
 	transform: rotate(5deg);
 }
@@ -156,8 +167,8 @@ path:hover {
 	background-color: green;
 	width: 100%;
 	left: 0;
-	margin-top: -3%;
-	height: 15%;
+	margin-top: -3.1%;
+	height: 20%;
 }
 body {
 	background: #f1f4f7;

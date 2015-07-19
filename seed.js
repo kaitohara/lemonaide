@@ -57,7 +57,7 @@ mongoose.connection.on('open', function() {
                 );
             },
             function(err) {
-                console.log("Finished inserting data");
+                console.log("Did not work");
                 console.log("Control-C to quit");
             }
         );
