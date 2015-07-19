@@ -54,6 +54,25 @@ router.post('/youth', function(req, res, next) {
 			}
 		})
 	})
+
+
+router.put('/updateSettings', function(req, res, next) {
+console.log(req.body.price)
+model.Youth.findOneAndUpdate({ 'firstName': 'Kaito' , 'products.productName':'Pizza'}, {$set: {"products.$.price" : req.body.price, "products.$.productName" : req.body.productName}}, function(err, data){
+console.log(data)
+console.log('here')
+})
+})
+
+router.put('/addProduct', function(req, res, next) {
+console.log(req.body)
+var newProduct = new model.Product()
+newProduct.name = req.body.name;
+newProduct.price = req.body.price;
+newProduct.cost = req.body.cost;
+model.Youth.findOneAndUpdate({ 'firstName': 'Kaito' , 'products.productName':'Pizza' })
+
+})
 	// router.put('/updateSettings', function(req, res, next) {
 	// 	model.Youth.find({
 	// 		firstName: 'Kaito'
