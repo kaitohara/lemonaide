@@ -15,6 +15,32 @@ Version 1.0
 
 
 
+ .splash-img-container{
+ 	width: 40%;
+ 	margin: 0 auto;
+ }
+
+.splash-img-container img {
+	width: 100%;
+}
+
+.splash-img-container h3 {
+	text-align: center;
+}
+
+.splash-img-container a {
+	text-decoration: none;
+	color: black;
+	font-size: 19px;
+	text-align: initial;
+	position: absolute;
+	margin-top: 7.4%;
+	margin-left: 3.4%;
+	transform: rotate(-12deg);
+}
+.splash-img-container a:hover {
+	transition: 1s;
+}
 body {
 	background: #f1f4f7;
 	padding-top: 50px;
