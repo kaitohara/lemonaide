@@ -1,4 +1,4 @@
-app.controller('managerCtrl', function($scope) {
+app.controller('updateCtrl', function($scope) {
 	$scope.dollarsEarned = function() {
 		return 5;
 	}

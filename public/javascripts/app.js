@@ -32,15 +32,30 @@ app.config(function($stateProvider, $locationProvider) {
 			url: "/business-statement",
 			templateUrl: "templates/signup-questions/business-statement.html"
 		})
-		.state("overview", {
+		.state("dashboard", {
+			url: "/dashboard",
+			controller: 'dashboardCtrl',
+			templateUrl: '/templates/dashboard.html'
+		})
+		.state("dashboard.overview", {
 			url: "/overview",
 			controller: "managerCtrl",
 			templateUrl: '/templates/overview.html'
 		})
-		.state("todo", {
+		.state("dashboard.update", {
+			url: "/update",
+			controller: "updateCtrl",
+			templateUrl: '/templates/update.html'
+		})
+		.state("dashboard.todo", {
 			url: '/todo',
 			templateUrl: '/templates/todo.html',
 			controller: "todoCtrl"
+		})
+		.state("dashboard.goal", {
+			url: '/goal',
+			templateUrl: '/templates/goal.html',
+			controller: "goalCtrl"
 		})
 		// .state("dashboard.update", {
 		// 	url: '/update',
