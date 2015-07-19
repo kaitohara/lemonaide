@@ -9,6 +9,7 @@ var data = {
     Youth: [{
         firstName: 'Kaito',
         lastName: 'Hara',
+        password: 'password',
         age: 8,
         businessName: 'Lemonade Stand',
         businessSummary: 'I want to make lemonade',
@@ -24,21 +25,22 @@ var data = {
             price: 7
         })]
     }, {
-        firstName: 'Greg',
-        lastName: 'Meyers',
+        firstName: 'Robin',
+        lastName: 'Kim',
+        password: 'password',
         age: 9,
-        businessName: 'Swimsuits',
-        businessSummary: 'I want to make cool swimsuits',
-        selfSummary: 'I looove swimsuits!',
-        region: 'Boston',
+        businessName: 'Selling Water',
+        businessSummary: 'I want to make water',
+        selfSummary: 'I looove water!',
+        region: 'California',
         products: [new models.Product({
-            productName: 'Swimsuit',
+            productName: 'Water',
             ingredients: [new models.Ingredient({
-                ingredientName: 'latex',
-                costPerUnit: 20,
+                ingredientName: 'water',
+                costPerUnit: 5,
                 unitsPerProduct: 1
             })],
-            price: 30
+            price: 7
         })]
     }]
 }

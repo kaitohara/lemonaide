@@ -67,7 +67,7 @@ var youthSchema = new mongoose.Schema({
 	//an optional mention for the region they live in.
 	region: String,
 	//what they sell (will relate to product schema)
-	products: [productSchema],
+	products: [productSchema]
 })
 
 
