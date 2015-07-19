@@ -29,11 +29,11 @@ var productSchema = new mongoose.Schema({
 		required: true
 	},
 	ingredients: [ingredientSchema],
-	price: {
+	price: Number,
+	numberSold: {
 		type: Number,
-		required: true
-	},
-	numberSold: { type: Number, default: 0 }
+		default: 0
+	}
 })
 
 var youthSchema = new mongoose.Schema({
@@ -47,10 +47,7 @@ var youthSchema = new mongoose.Schema({
 		type: String,
 		required: true
 	},
-	password: {
-		type: String,
-		required: true
-	},
+	password: String,
 	//their age (not required)
 	age: Number,
 	//name of their business (definitely required)

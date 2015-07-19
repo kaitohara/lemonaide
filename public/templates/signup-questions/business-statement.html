@@ -1,15 +1,15 @@
 <div class="col-lg-5 col-md-5 col-sm-6 col-xs-6 center-block vertical-center centered" id="signup-block">
 	<h3 class='sneet' >Love it! Finally, how would you describe your business?</h3>
-	<p><i>Example: Lemonade</i></p>
+	<p><i>Example: I want to make the most sour lemonade!</i></p>
 	<form method="PUT">
 		<div class="form-group">
-			<input name="businessStatement" type="text" class="form-control" id="businessStatement" maxlength="40" ng-model="signupUser.businessStatement">
+			<input name="businessStatement" type="text" class="form-control" id="businessStatement" maxlength="40" ng-model="signupUser.businessSummary">
 		</div>
 
 		<button ui-sref="dashboard.overview" 
 				type="submit" 
 				class="spin btn btn-lg action fave hvr-grow" 
-				aria-hidden="true"><i class="glyphicon glyphicon-chevron-right"></i></button>
+				aria-hidden="true" ng-click = "signUp(signupUser)" ><i class="glyphicon glyphicon-chevron-right"></i></button>
 	</form>
 </div>
 

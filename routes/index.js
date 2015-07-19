@@ -40,16 +40,30 @@ router.get('/youth', function(req, res, next) {
 	})
 })
 
-// router.put('/updateSettings', function(req, res, next) {
-// 	model.Youth.find({
-// 		firstName: 'Kaito'
-// 	}).exec().then(function(youth) {
-// 		console.log(1)
-// 		if (req.body.productName) {
-// 			console.log(2)
-// 			youth.products[0].productName = req.body.productName;
-// 			console.log(youth)
-// 		}
+router.post('/youth', function(req, res, next) {
+		console.log("DOES THIS WORK");
+		req.body.products = new model.Product({
+			productName: req.body.products
+		});
+		// console.log(req.body);
+		model.Youth.create(req.body, function(err, data) {
+			if (err) console.log(err);
+			else {
+				console.log(data);
+				res.json(data);
+			}
+		})
+	})
+	// router.put('/updateSettings', function(req, res, next) {
+	// 	model.Youth.find({
+	// 		firstName: 'Kaito'
+	// 	}).exec().then(function(youth) {
+	// 		console.log(1)
+	// 		if (req.body.productName) {
+	// 			console.log(2)
+	// 			youth.products[0].productName = req.body.productName;
+	// 			console.log(youth)
+	// 		}
 
 // 		if (req.body.price) {
 // 			console.log(3)
