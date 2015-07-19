@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/manager', function(req, res, next) {
-	var index = path.join(__dirname, '..', 'public', 'templates', 'manager.html');
+	var index = path.join(__dirname, '..', 'public', 'templates', 'dashboard.html');
 	res.sendFile(index);
 });
 
