@@ -165,8 +165,11 @@ var data = {
                 costPerUnit: 4.50,
                 unitsPerProduct: .125
             })],
-            price: 3
-        })]
+            price: 3,
+            numberSold:27
+        })],
+        goalDescription: "New Bike",
+        goalAmount: 200
     }, {
         firstName: 'Greg',
         lastName: 'M',
