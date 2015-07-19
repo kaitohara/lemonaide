@@ -42,6 +42,11 @@ app.config(function($stateProvider, $locationProvider) {
 			controller: "managerCtrl",
 			templateUrl: '/templates/overview.html'
 		})
+		.state("dashboard.update", {
+			url: "/update",
+			controller: "updateCtrl",
+			templateUrl: '/templates/update.html'
+		})
 		.state("dashboard.todo", {
 			url: '/todo',
 			templateUrl: '/templates/todo.html',

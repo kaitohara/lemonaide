@@ -1,4 +1,4 @@
-app.controller('managerCtrl', function($scope) {
+app.controller('todoCtrl', function($scope) {
 	$scope.dollarsEarned = function() {
 		return 5;
 	}
