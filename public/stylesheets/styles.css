@@ -12,34 +12,152 @@ Version 1.0
 	font-family: "Comic";
 	src: url("../fonts/comicNeue/ComicNeue-Regular.otf");
 }
+	 @-moz-keyframes myfirst
+	{
+		0%   {background:yellow}
+		50%  {background:#fff6e5;}
+		100%   {background:yellow;}
+	}
 
+	@-webkit-keyframes myfirst
+	{#ffdb99
+		0%   {background:yellow;}
+		50%  {background:#fff6e5;}
+		100%   {background:yellow;}
+	}
+	 @-moz-keyframes float
+	{
+		0%   {background:yellow}
+		50%  {background:#fff6e5;}
+		100%   {background:yellow;}
+	}
 
+	@-webkit-keyframes float
+	{#ffdb99
+		0%   {margin-left:53%;}
+		100%   {margin-left:-43%;}
+	}
+/*	animation:myfirst 5s;
+	-moz-animation:myfirst 5s infinite;
+	-webkit-animation:myfirst 5s infinite; */
+svg {
+	z-index: 99;
+animation: float 15s;
+margin-left: 53%;
+margin-top: -8%;
+position: absolute;
+  width: 50%;
+  height: 50%;
+}
+path {
+  fill: white;
+  stroke: black;
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+path:hover {
+  fill: aliceblue;
+  stroke: lightskyblue;
+}
 
+.outerhalo{
+	background-color: yellow;
+	margin-left: 50%;
+	z-index: 51;
+	position:absolute;
+	height: 120px;
+	width: 120px;
+	border-radius: 100%;
+	animation: myfirst 3s infinite;
+	animation-delay: .4s;
+}
+.middlehalo{
+	background-color: yellow;
+	margin-left: 10%;
+	margin-top: 8%;
+	z-index: 40;
+	position:absolute;
+	height: 100px;
+	width: 100px;
+	border-radius: 100%;
+	animation: myfirst 3s infinite;
+	animation-delay: .2s;
+}
+.sun{
+	background-color: yellow;
+	z-index: 50;
+	position: absolute;
+	margin-left: 10%;
+	margin-top: 10%;
+	height: 80px;
+	width: 80px;
+	border-radius: 100%;
+	animation: myfirst 3s infinite;
+	animation-delay: 0s;
+
+}
+
+.title-wrap{
+	margin-top: 2%;
+	margin-left: 2%;
+	width: 33%;
+	position: absolute;
+}
  .splash-img-container{
+ 	z-index:100;
  	width: 40%;
  	margin: 0 auto;
  }
 
 .splash-img-container img {
 	width: 100%;
+	display: block;
+	z-index: 100;
 }
 
 .splash-img-container h3 {
 	text-align: center;
+	word-wrap:break-word;
+	letter-spacing: 10px;
+	display: block;
 }
 
-.splash-img-container a {
+.splash-img-container .login {
+	letter-spacing: 3px;
 	text-decoration: none;
 	color: black;
 	font-size: 19px;
 	text-align: initial;
 	position: absolute;
-	margin-top: 7.4%;
-	margin-left: 3.4%;
+	margin-top: 14%;
+	margin-left: 3%;
 	transform: rotate(-12deg);
 }
-.splash-img-container a:hover {
-	transition: 1s;
+
+.splash-img-container .signup {
+	letter-spacing: 3px;
+	text-decoration: none;
+	color: black;
+	font-size: 19px;
+	text-align: initial;
+	position: absolute;
+	margin-top: 14%;
+	margin-left: 31%;
+	transform: rotate(5deg);
+}
+.login:hover, .signup:hover {
+	transition: 0.5s;
+	color: white;
+}
+
+.grass{
+	z-index: 0;
+	position: absolute;
+	background-color: green;
+	width: 100%;
+	left: 0;
+	margin-top: -3%;
+	height: 15%;
 }
 body {
 	background: #f1f4f7;
