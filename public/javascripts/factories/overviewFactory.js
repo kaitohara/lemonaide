@@ -1,7 +1,8 @@
-app.factory("overviewFactory", function($scope, $http) {
+app.factory("overviewFactory", function($http) {
 	return {
-		getPrice = function(){
+		getPrice: function(){
 			console.log('a')
+			return 8;
 		}
 	}
 })
