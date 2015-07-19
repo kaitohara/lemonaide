@@ -12,72 +12,9 @@
 <!--wont need above once we switched to states -->
 <body>
 	<navbar></navbar>
-	<div class="centered">
-		<div class="col-lg-5 col-md-5 col-sm-6 col-xs-6 center-block vertical-center centered" id="login-block">
-			
-			<form action="/signedup" method="GET">
-				<div class="form-group">
-					<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-				
-					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-				</div>
 
-				<div class="checkbox">
-					<label>
-						<input type="checkbox"> Remember me
-					</label>
-				</div>
-				<button type="submit" class="btn btn-lg action fave hvr-grow" aria-hidden="true"><i class="spin glyphicon glyphicon-chevron-right"></i></button>
-			</form>
-		</div>
-	</div>
+	<ui-view></ui-view>
 
-	
-
-	<div class="col-lg-5 col-md-5 col-sm-6 col-xs-6 center-block vertical-center centered" id="signup-block">
-		<h3 class='sneet' >It's great to have you, [Name]! What's the name of your business?</h3>
-		<p><i>Example: Bobby's Lemonade Stand</i></p>
-		<form action="/signedup" method="PUT">
-			<div class="form-group">
-				<input name="businessName" type="text" class="form-control" id="businessName" maxlength="32">
-			</div>
-			<button type="submit" class="btn btn-lg action fave hvr-grow" aria-hidden="true"><i class="spin glyphicon glyphicon-chevron-right"></i></button>
-		</form>
-	</div>
-
-	<div class="col-lg-5 col-md-5 col-sm-6 col-xs-6 center-block vertical-center centered" id="signup-block">
-		<h3 class='sneet' >Your name is awesome! What are you thinking of selling?</h3>
-		<p><i>Example: Lemonade</i></p>
-		<form action="/signedup" method="PUT">
-			<div class="form-group">
-				<input name="businessName" type="text" class="form-control" id="businessName" maxlength="32">
-			</div>
-
-			<button type="submit" class="btn btn-lg action fave hvr-grow" aria-hidden="true"><i class="spin glyphicon glyphicon-chevron-right"></i></button>
-		</form>
-	</div>
-
-	<div class="col-lg-5 col-md-5 col-sm-6 col-xs-6 center-block vertical-center centered" id="signup-block">
-		<h3 class='sneet' >That sounds like a great product! How would you describe your business?</h3>
-		<p><i>Example: I want to make the world's most sour lemonade!</i></p>
-		<form action="/signedup" method="PUT">
-			<div class="form-group">
-				<textarea name="businessName" type="text" class="form-control" id="businessName" maxlength="32"></textarea>
-			</div>
-			<button type="submit" class="btn btn-lg action fave hvr-grow" aria-hidden="true"><i class="spin glyphicon glyphicon-chevron-right"></i></button>
-		</form>
-	</div>
-
-	<div class="col-lg-5 col-md-5 col-sm-6 col-xs-6 center-block vertical-center centered" id="signup-block">
-		<h3 class='sneet' >It's great to have you, [Name]! What's the name of your business?</h3>
-		<p><i>Example: Bobby's Lemonade Stand</i></p>
-		<form action="/signedup" method="PUT">
-			<div class="form-group">
-				<input name="businessName" type="text" class="form-control" id="businessName" maxlength="32">
-			</div>
-			<button type="submit" class="btn btn-lg action fave hvr-grow" aria-hidden="true"><i class="spin glyphicon glyphicon-chevron-right"></i></button>
-		</form>
-	</div>
 
 <script src="/scripts/jquery.min.js"></script>
 	
