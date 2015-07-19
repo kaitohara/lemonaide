@@ -17,6 +17,17 @@ Version 1.0
 	src: url("../fonts/Edmondsans-Bold.otf");
 }
 
+@font-face {
+	font-family: "Dosis";
+	src: url("../fonts/dosis.woff2");
+}
+
+@font-face {
+	font-family: 'Arial Rounded Bold';
+	src: url("../fonts/ArialRoundedBold.ttf");
+}
+/*@import url('//fonts.googleapis.com/css?family=Dosis');*/
+
 	 @-moz-keyframes myfirst
 	{
 		0%   {background:yellow}
@@ -179,7 +190,7 @@ body {
 	background: #f1f4f7;
 	padding-top: 50px;
 	color: #5f6468;
-	font-family: 'Comic'
+	font-family: 'Dosis', sans-serif;
 }
 
 p {
@@ -216,6 +227,7 @@ h3, h4 {
 
 .large {
 	font-size: 2em;
+	font-weight:600;
 }
 
 .text-muted {
@@ -802,6 +814,7 @@ a.bg-danger:hover {
 h1.page-header {
 	margin-top: 30px;
 	border-bottom: 0;
+	font-weight: 600;
 }
 
 /*Charts*/
@@ -938,6 +951,7 @@ h1.page-header {
 	list-style: none;
 	line-height: 0.9;
 	padding: 14px 15px 8px 15px;
+	font-size: 2em;
 }
 
 .todo-list-item:hover, a.todo-list-item:focus {
@@ -1028,4 +1042,21 @@ h1.page-header {
 .col-center {
 	float: none;
     margin: 0 auto;
+}
+.roundedIMG {
+	border-radius:100%;
+	width: 70%;
+}
+
+.addproductform {
+	margin-top:0px;
+	font-size:2em;
+}
+.todo-input {
+	font-size:2em;
+}
+
+.add-button {
+	margin-top:20px;
+	font-size: 1em;
 }
