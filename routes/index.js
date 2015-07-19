@@ -27,7 +27,7 @@ router.get('/todo', function(req, res, next) {
 router.get('/youthList', function(req, res, next) {
 
 	model.Youth.find().exec().then(function(youthList) {
-		res.json(youthList.data)
+		res.json(youthList)
 	})
 });
 
