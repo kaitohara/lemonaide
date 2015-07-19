@@ -63,7 +63,7 @@ var youthSchema = new mongoose.Schema({
 	//an optional mention for the region they live in.
 	region: String,
 	//what they sell (will relate to product schema)
-	products: [productSchema]
+	products: [productSchema],
 })
 
 
@@ -73,10 +73,10 @@ var Product = mongoose.model("Product", productSchema);
 var Ingredient = mongoose.model("Ingredient", ingredientSchema);
 
 module.exports = {
-	Youth: mongoose.model('Youth', youthSchema),
-	Product: mongoose.model('Product', productSchema),
-	Ingredient: mongoose.model('Ingredient', ingredientSchema)
-}
-// module.exports.Youth = Youth;
-// module.exports.Product = Product;
-// module.exports.Ingredient = Ingredient;
+		Youth: mongoose.model('Youth', youthSchema),
+		Product: mongoose.model('Product', productSchema),
+		Ingredient: mongoose.model('Ingredient', ingredientSchema)
+	}
+	// module.exports.Youth = Youth;
+	// module.exports.Product = Product;
+	// module.exports.Ingredient = Ingredient;
