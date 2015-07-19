@@ -39,7 +39,7 @@ app.config(function($stateProvider, $locationProvider) {
 		})
 		.state("dashboard.overview", {
 			url: "/overview",
-			controller: "managerCtrl",
+			controller: "overviewCtrl",
 			templateUrl: '/templates/overview.html'
 		})
 		.state("dashboard.update", {
