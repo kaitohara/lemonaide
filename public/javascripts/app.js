@@ -57,6 +57,12 @@ app.config(function($stateProvider, $locationProvider) {
 			templateUrl: '/templates/goal.html',
 			controller: "goalCtrl"
 		})
+
+		.state("youthBusinesses", {
+			url: '/youthBusinesses',
+			templateUrl: '/templates/sponsorSection/businessList.html',
+			controller: "businessListCtrl"
+		})
 		// .state("dashboard.update", {
 		// 	url: '/update',
 		// 	templateUrl: '/templates/update.html',
